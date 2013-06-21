@@ -1,0 +1,193 @@
+<?php
+$this->breadcrumbs=array(
+	'Fees Payment Transactions'=>array('/feesPaymentTransaction/addfees'),
+	'Add',
+);
+
+$this->menu=array(
+//	array('label'=>'List FeesPaymentTransaction', 'url'=>array('index')),
+//	array('label'=>'Manage FeesPaymentTransaction', 'url'=>array('admin')),
+);
+
+?>
+
+<h1>Collect Fees</h1>
+
+<?php echo $this->renderPartial('_form', array('model'=>$model,'FeesMasterDetails'=>$FeesMasterDetails)); ?>
+<?php
+		$criteria = new CDbCriteria;
+		$stud_trans = StudentTransaction::model()->findByPk($_REQUEST['id']);
+
+		$criteria ->condition = 'fees_student_id ='.$_REQUEST['id'].' AND fees_academic_period_id='.$stud_trans['student_academic_term_period_tran_id'].' AND fees_academic_term_id='.$stud_trans['student_academic_term_name_id'];
+
+		$listofid = FeesPaymentTransaction::model()->findAll($criteria);
+		$cash_total = 0;
+		$cheque_total = 0;
+		$amount;
+		$total = 0;
+		
+		foreach($listofid as $list)
+			{
+			if($list->fees_payment_method_id == 1)
+				$cash_total = $cash_total + FeesPaymentCash::model()->findByPk($list->fees_payment_cash_cheque_id)->fees_payment_cash_amount;
+			else
+			{
+				//$cheque_total = $cheque_total + FeesPaymentCheque::model()->findByPk($list->fees_payment_cash_cheque_id)->fees_payment_cheque_amount;
+			
+				//$info_model=StudentInfo::model()->findByAttributes(array('student_enroll_no'=>$_POST['en_no']));
+				$amount = FeesPaymentCheque::model()->findByAttributes(array('fees_payment_cheque_status'=>0,'fees_payment_cheque_id'=>$list->fees_payment_cash_cheque_id));
+				
+				
+				$cheque_total = $cheque_total + $amount['fees_payment_cheque_amount'];
+				
+				
+			}
+			}
+			echo "<div class='total-amount'><h4>Total Paid Fees : <b>".$total = $cash_total + $cheque_total .'</b></h4></div>';
+
+			Yii::app()->user->setState('student_paid_fees',$total);
+?>
+
+<h3 class="past-fees-grid"> Fees Paid by Cash </h3>
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'fees-cash-grid',
+	'dataProvider'=>$cash_model->cashsearch(),
+//	'filter'=>$model,
+	'enableSorting'=>false,
+	'ajaxUpdate'=>false,
+	'columns'=>array(
+		array(
+		'header'=>'SI No',
+		'class'=>'IndexColumn',
+		),
+		//'fees_payment_transaction_id',
+		//'fees_payment_master_id',
+		array('name'=>'fees_payment_method_name',
+			'value'=>'$data->Rel_pay_method->fees_payment_method_name',
+		     ),
+		array('name'=>'Amount',
+			'value'=>'FeesPaymentCash::model()->findByPk($data->fees_payment_cash_cheque_id)->fees_payment_cash_amount',
+		     ),
+		//'fees_payment_cash_cheque_id',
+		array('name'=>'Receipt No',
+			'value'=>'FeesReceipt::model()->findByPk($data->fees_receipt_id)->fees_receipt_number',
+		     ),
+		//'fees_receipt_id',
+		//'fees_received_date',
+		
+		//'fees_payment',
+		/*
+		'fees_received_user_id',
+		'fees_full_part_payment_id',
+		'fees_student_id',*/
+
+		array(
+			'class'=>'CButtonColumn',
+			'template' => '{update}{delete}{print_rec}',
+			'buttons'=>array(
+			'delete' => array(
+                                'label'=>'Delete Fees', // text label of the button
+				'url'=>'Yii::app()->createUrl("feesPaymentTransaction/delete", array("id"=>$data->fees_payment_transaction_id,"stud_id"=>'.$_REQUEST['id'].'))',
+				
+				),
+                        'update' => array(
+                                'label'=>'Edit Fees', // text label of the button
+				'url'=>'Yii::app()->createUrl("feesPaymentTransaction/update_payfeescash", array("id"=>$data->fees_payment_cash_cheque_id,"student_id"=>'.$_REQUEST['id'].'))',
+                        ),
+                        'print_rec' => array(
+                                'label'=>'Print Receipt', // text label of the button
+				'url'=>'Yii::app()->createUrl("feesPaymentTransaction/print_cash_receipt", array("id"=>$data->fees_payment_transaction_id))',
+                                'imageUrl'=> Yii::app()->baseUrl.'/images/rs.png',  // image URL of the button. If not set or false, a text link is used
+                               'options' => array('class'=>'fees-receipt', 'target'=>'_blank'), // HTML options for the button
+                        ),
+
+		   ),
+		),
+	),
+)); ?>
+
+<h3 class="past-fees-grid"> Fees Paid by Cheque/Draft Details </h3>
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'transport-fees-cheque-grid',
+	'dataProvider'=>$cheque_model->chequesearch(),
+//	'filter'=>$model,
+	'ajaxUpdate'=>false,
+	'enableSorting'=>false,
+	'columns'=>array(
+		array(
+		'header'=>'SI No',
+		'class'=>'IndexColumn',
+		),
+		//'fees_payment_transaction_id',
+		//'fees_payment_master_id',
+		//'fees_payment_cheque_date',
+		array('header'=>'Cheque/DD Number',
+			'value'=>'FeesPaymentCheque::model()->findByPk($data->fees_payment_cash_cheque_id)->fees_payment_cheque_number',
+		     ),
+
+		array('header'=>'Cheque/DD Date',
+			'value'=>'date_format(date_create(FeesPaymentCheque::model()->findByPk($data->fees_payment_cash_cheque_id)->fees_payment_cheque_date), "d-m-Y")',
+		     ),
+		array('header'=>'Bank Name',
+			'value'=>'BankMaster::model()->findByPk(FeesPaymentCheque::model()->findByPk($data->fees_payment_cash_cheque_id)->	fees_payment_cheque_bank)->bank_full_name',
+		     ),
+		array('header'=>'Branch Name',
+			'value'=>'FeesPaymentCheque::model()->findByPk($data->fees_payment_cash_cheque_id)->	fees_payment_cheque_branch',
+		     ),
+		
+
+		array('name'=>'fees_payment_method_name',
+		'value'=>'$data->Rel_pay_method->fees_payment_method_name',
+		     ),
+		
+		array('name'=>'Amount',
+			'value'=>'FeesPaymentCheque::model()->findByPk($data->fees_payment_cash_cheque_id)->fees_payment_cheque_amount',
+		     ),
+		
+		//'fees_payment_cash_cheque_id',
+		//'fees_receipt_id',
+		array('name'=>'Receipt No',
+			'value'=>'FeesReceipt::model()->findByPk($data->fees_receipt_id)->fees_receipt_number',
+		     ),
+		//'fees_payment',
+		/*
+		'fees_received_user_id',
+		'fees_full_part_payment_id',
+		'fees_student_id',*/
+
+		array(
+			'class'=>'MyCButtonColumn',
+			'template' => '{update}{delete}{print_rec}',
+			'buttons'=>array(
+			'delete' => array(
+                                'label'=>'Delete Fees', // text label of the button
+				'url'=>'Yii::app()->createUrl("feesPaymentTransaction/delete", array("id"=>$data->fees_payment_transaction_id,"stud_id"=>'.$_REQUEST['id'].'))',
+				//'options'=>array('confirm'=>'Are you sure want to delete this record?'),
+				//'click'=>'js: function(){
+				//}',
+
+				),
+                        'update' => array(
+                                'label'=>'Edit Fees', // text label of the button
+				'url'=>'Yii::app()->createUrl("feesPaymentTransaction/update_payfeescheque", array("id"=>$data->fees_payment_cash_cheque_id,"student_id"=>'.$_REQUEST['id'].'))',
+                        ),
+
+			'print_rec' => array(
+                                'label'=>'Print Receipt', // text label of the button
+				'url'=>'Yii::app()->createUrl("feesPaymentTransaction/print_cheque_receipt", array("id"=>$data->fees_payment_transaction_id))',
+                                'imageUrl'=> Yii::app()->baseUrl.'/images/rs.png',  // image URL of the button. If not set or false, a text link is used
+                               'options' => array('class'=>'fees-receipt', 'target'=>'_blank'), // HTML options for the button
+
+                        ),
+		   ),
+		),
+	),
+)); ?>
+
+<?php 
+	echo $this->renderPartial('all_fees'); ?>
+
+
+

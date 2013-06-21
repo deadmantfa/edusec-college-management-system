@@ -1,0 +1,81 @@
+<?php
+		
+		$this->widget('zii.widgets.grid.CGridView', array(
+		'id'=>'fees-payment-transaction-grid',
+		'dataProvider'=>$fees_cheque->cheque_search($no),
+		'enableSorting'=>false,
+		'enablePagination'=>false,
+		//'filter'=>$fees_cheque,
+		
+		'columns'=>array(
+			array(
+			'header'=>'SI No',
+			'class'=>'IndexColumn',
+			),
+
+			'fees_payment_cheque_number',
+
+			array(
+			    'header'=>'Receipt No.',
+			    'value'=>'FeesReceipt::model()->findByPk(FeesPaymentTransaction::model()->findByAttributes(array("fees_payment_cash_cheque_id"=>$data->fees_payment_cheque_id,"fees_payment_transaction_organization_id"=>Yii::app()->user->getState("org_id"),"fees_payment_method_id"=>2))->fees_receipt_id)->fees_receipt_number',
+			),
+
+			array(
+			    'name'=>'student_roll_no',
+			    'value'=>'StudentInfo::model()->findByPk(StudentTransaction::model()->findByPk(FeesPaymentTransaction::model()->findByAttributes(array("fees_payment_cash_cheque_id"=>$data->fees_payment_cheque_id,"fees_payment_transaction_organization_id"=>Yii::app()->user->getState("org_id"),"fees_payment_method_id"=>2))->fees_student_id)->student_transaction_student_id)->student_roll_no',
+			),
+				
+			array(
+			    'name'=>'student_enroll_no',
+			    'value'=>'StudentInfo::model()->findByPk(StudentTransaction::model()->findByPk(FeesPaymentTransaction::model()->findByAttributes(array("fees_payment_cash_cheque_id"=>$data->fees_payment_cheque_id,"fees_payment_transaction_organization_id"=>Yii::app()->user->getState("org_id"),"fees_payment_method_id"=>2))->fees_student_id)->student_transaction_student_id)->student_enroll_no',
+			),
+
+			array(
+			    'name'=>'student_first_name',
+			    'value'=>'StudentInfo::model()->findByPk(StudentTransaction::model()->findByPk(FeesPaymentTransaction::model()->findByAttributes(array("fees_payment_cash_cheque_id"=>$data->fees_payment_cheque_id,"fees_payment_transaction_organization_id"=>Yii::app()->user->getState("org_id"),"fees_payment_method_id"=>2))->fees_student_id)->student_transaction_student_id)->student_first_name',
+			),
+			array(
+			    'name'=>'Semester',
+			    'value'=>'AcademicTerm::model()->findByPk(FeesPaymentTransaction::model()->findByAttributes(array("fees_payment_cash_cheque_id"=>$data->fees_payment_cheque_id,"fees_payment_transaction_organization_id"=>Yii::app()->user->getState("org_id"),"fees_payment_method_id"=>2))->fees_academic_term_id)->academic_term_name',
+			),
+			array(
+			    'name'=>'Academic Year',
+			    'value'=>'AcademicTermPeriod::model()->findByPk(FeesPaymentTransaction::model()->findByAttributes(array("fees_payment_cash_cheque_id"=>$data->fees_payment_cheque_id,"fees_payment_transaction_organization_id"=>Yii::app()->user->getState("org_id"),"fees_payment_method_id"=>2))->fees_academic_period_id)->academic_term_period',
+			),
+			array(
+             		   'name'=>'fees_payment_cheque_date',
+               		   'type'=>'raw',		
+                	   'value'=>'date_format(date_create($data->fees_payment_cheque_date), "d-m-Y")',
+	        	),
+			
+			array(
+			'name' => 'fees_payment_cheque_status',
+			'value'=>'($data->fees_payment_cheque_status == 1) ?  "Return Cheque" : "Credit Cheque"',
+                 	),
+			//'fees_payment_cheque_bank',
+			array(
+			'name' => 'fees_payment_cheque_bank',
+			'value' => 'BankMaster::model()->findByPk($data->fees_payment_cheque_bank)->bank_short_name',
+			),
+			'fees_payment_cheque_branch',
+			'fees_payment_cheque_amount',
+			array(
+				'class'=>'CButtonColumn',
+				'template' => '{view}{Add Fees}',
+				'buttons'=>array(
+				 'Add Fees' => array(
+                                'label'=>'Cheque Return', // text label of the button
+				'url'=>'Yii::app()->createUrl("FeesPaymentCheque/my_update", array("id"=>$data->fees_payment_cheque_id))',
+                               	 'imageUrl'=> Yii::app()->baseUrl.'/images/add_cheque_return.png',  // image URL of the button. If not set or false, a text link is used
+                              	 'options' => array('class'=>'fees'), // HTML options for the button
+                        ),
+				)				
+
+			),
+		),
+	
+	));
+	
+
+?>
+

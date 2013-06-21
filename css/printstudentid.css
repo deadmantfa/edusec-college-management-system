@@ -1,0 +1,381 @@
+@media screen {
+.main {
+  border: 2px solid black;
+  border-radius: 5px 5px 5px 5px;
+  float: left;
+  height: 200px;
+  margin-bottom: 10px;
+  width: 310px;
+}
+
+.outer {
+  float: left;
+  width: 100%;
+}
+
+.idcardheader {
+  float:left;
+  border-bottom:1px solid black;
+}
+
+.logo {
+  float:left;
+  margin:5px 5px 5px 5px;
+}
+
+.collegeheader {
+  font-family:Arial;
+  line-height:12px;
+  width:234px;
+  float:left; 
+  margin-top:5px;
+}
+
+.contact-details {
+  float: left;
+  width: 230px;
+  font-size:7px;
+  min-height:50px;
+  line-height:12px;
+}
+
+h3 { 
+  margin:0px;
+  line-height:10px;
+}
+
+.org_name {
+  line-height:12px;
+  min-height:18px !important;
+  float:left;
+  font-size:10px;
+}
+
+h4 {
+  margin:0px;
+  line-height:20px;
+}
+
+.front_content {
+  float:left;
+  margin-top:5px;
+  width:100%;
+  margin-bottom:0px;  
+  max-height:80px;
+}
+
+.contentpic {
+  float:left;
+}
+
+.contentinfo {
+  font-size:11px;
+  font-family:Arial;
+  margin-left:7px;
+  margin-bottom:10px; 
+  width:71%;
+  float:left;
+  
+}
+
+.value-detail {
+  float: left;
+  margin-left: 5px;
+  width: 150px;
+}
+
+.student-details {
+  float: left;
+  width: 100%;
+  margin-bottom:2px;
+}
+
+lable {
+  float: left;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.footername {
+  float:right;
+  margin-right:-80px;
+  font-size:11px;
+  margin-top:-12px;
+}
+
+.barcode {
+  float:left;
+  margin-left:85px;
+  
+}
+
+
+.barcode img {
+  float: left;
+}
+
+.front {
+ float:left;
+}
+.front_sign {
+ float:right;
+ margin-top: -39px;
+}
+
+/***** id card backend css ******/
+
+.backend_main {
+  border: 2px solid black;
+  border-radius: 5px 5px 5px 5px;
+  float: left;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  width: 310px;
+}
+
+.backend_header {
+  float:left;
+  border-bottom:1px solid black;
+}
+
+.back_logo {
+  float:left;
+  margin:5px 5px 5px 5px;
+  padding-left:35px;
+}
+
+.back_header {
+  font-size:13px;
+  height: 40px;
+  padding-top:10px;
+}
+
+.org_branch_data {
+  float: left;
+  width: 49.6%;
+  border-right: 1px solid;
+  height: 148px;
+}
+
+.no-right-border {
+  border: medium none !important;
+}
+
+.backend_header,
+.backend-content {
+  float:left;
+  width:100%;
+}
+
+.org_branch_data .college-name {
+    font-size: 9px;
+}
+.org_branch_data ul li {
+    font-size: 10px;
+}
+
+.college-name {
+  height: 32px;
+  padding-left: 8px;
+  margin-top: 5px;
+  border-bottom:1px solid;
+}
+
+h2 {
+  page-break-after:always;
+}
+} /*End media Screen*/
+
+@media print {
+.main {
+  border: 2px solid black;
+  border-radius: 5px 5px 5px 5px;
+  float: left;
+  height: 200px;
+  margin-bottom: 10px;
+  width: 310px;
+}
+
+.outer {
+  float: left;
+  width: 100%;
+}
+
+.idcardheader {
+  float:left;
+  border-bottom:1px solid black;
+}
+
+.logo {
+  float:left;
+  margin:5px 5px 5px 5px;
+}
+
+.collegeheader {
+  font-family:Arial;
+  line-height:12px;
+  width:234px;
+  float:left; 
+  margin-top:5px;
+}
+
+.contact-details {
+  float: left;
+  width: 230px;
+  font-size:7px;
+  min-height:50px;
+  line-height:12px;
+}
+
+h3 { 
+  margin:0px;
+  line-height:10px;
+}
+
+.org_name {
+  line-height:12px;
+  min-height:18px !important;
+  float:left;
+  font-size:10px;
+}
+
+h4 {
+  margin:0px;
+  line-height:20px;
+}
+
+.front_content {
+  float:left;
+  margin-top:5px;
+  width:100%;
+  margin-bottom:0px;  
+  max-height:80px;
+}
+
+.contentpic {
+  float:left;
+}
+
+.contentinfo {
+  font-size:11px;
+  font-family:Arial;
+  margin-left:7px;
+  margin-bottom:10px; 
+  width:71%;
+  float:left;
+  
+}
+
+.value-detail {
+  float: left;
+  margin-left: 5px;
+  width: 150px;
+}
+
+.student-details {
+  float: left;
+  width: 100%;
+  margin-bottom:2px;
+}
+
+lable {
+  float: left;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.footername {
+  float:right;
+  margin-right:-80px;
+  font-size:11px;
+  margin-top:-12px;
+}
+
+.barcode {
+  float:left;
+  margin-left:85px;
+  
+}
+
+
+.barcode img {
+  float: left;
+}
+
+.front {
+ float:left;
+}
+.front_sign {
+ float:right;
+ margin-top: -39px;
+}
+
+/***** id card backend css ******/
+
+.backend_main {
+  border: 2px solid black;
+  border-radius: 5px 5px 5px 5px;
+  float: left;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  width: 310px;
+}
+
+.backend_header {
+  float:left;
+  border-bottom:1px solid black;
+}
+
+.back_logo {
+  float:left;
+  margin:5px 5px 5px 5px;
+  padding-left:35px;
+}
+
+.back_header {
+  font-size:13px;
+  height: 40px;
+  padding-top:10px;
+}
+
+.org_branch_data {
+  float: left;
+  width: 49.6%;
+  border-right: 1px solid;
+  height: 148px;
+}
+
+.no-right-border {
+  border: medium none !important;
+}
+
+.backend_header,
+.backend-content {
+  float:left;
+  width:100%;
+}
+
+.org_branch_data .college-name {
+    font-size: 9px;
+}
+.org_branch_data ul li {
+    font-size: 10px;
+}
+
+.college-name {
+  height: 32px;
+  padding-left: 8px;
+  margin-top: 5px;
+  border-bottom:1px solid;
+}
+
+h2 {
+  page-break-after:always;
+}
+.print {
+	display:none;
+}
+
+} /*End media Print*/

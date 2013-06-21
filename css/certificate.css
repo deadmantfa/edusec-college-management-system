@@ -1,0 +1,124 @@
+
+.certificate_main {
+    border: 2px solid #000000;
+    clear: both;
+    left: 28px;
+    margin: 0 0 40px;
+    min-height: 464px;
+    position: relative;
+    top: 20px;
+    /*width: 650px;*/
+    height:auto;
+    width:880px;
+    z-index: 1;
+    
+
+}
+.certificate_header {
+    background-color: white;
+    border-bottom: 3px solid black;
+    height: 100px;
+    margin: 0 0 10px;
+    width: auto;
+}
+.certificate-logo {
+    float: left;
+  
+}
+#certificate_title {
+    color: #000000;
+    float: left;
+    padding: 2px 0 0 10px;
+    text-align: center;
+    background-attachment: fixed; 
+    z-index: 2;
+    margin-top: 10px;
+    font-size: 22px;
+}
+.certificate_title {
+    color: #000;
+    text-align:center;
+    font-size: 18px;
+}
+.certificate_content {
+    clear: both;
+   /* float: left;*/
+    min-height: 300px;
+}
+.certificate_date {
+    float: left;
+    text-align: start;
+    width: 628px;
+    padding-left:10px;
+}
+.certificate_footer {
+    border-top: 2px solid #000000;
+    clear: both;
+   /* float: left;*/
+    padding: 10px;
+    /*width: 630px;*/
+    z-index: 3;
+}
+
+.certificate_pd {
+    height:auto;
+}
+.content {
+    min-height:220px;
+    text-align:left;
+    margin-top:10px;
+    margin-bottom:20px;
+    padding:0 20px 0 20px;
+}
+.content_footer {
+   text-align:right;
+   padding-right:60px;
+   margin-bottom:20px;
+}
+.row {
+    width: 25% !important;
+}
+.row-new {
+    width: 100% !important;
+}
+.note {
+    margin-left: -210px !important;
+    padding-top: 15px !important;
+}
+.div
+{
+	width: 100px !important;
+}
+.row1 {
+    width: 100%;
+}
+#certificate-form {
+    width: 560px;
+}
+label {
+    
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align:center;
+    margin-top: 9px !important;
+    width: 96px !important;
+    padding-left: 10px;
+}
+#label_info {
+    
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align:center;
+    margin-top: 9px !important;
+    width: 96px !important;
+    padding-left: 10px;
+}
+#label_width {
+    width:50px !important;
+}
+.submit {
+    margin-left: 20px !important;
+}
+
+
+

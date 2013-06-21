@@ -1,0 +1,208 @@
+/***************** UPDATED BY KARMRAJ ZALA ************************/
+
+table.table_data {
+  background: none repeat scroll 0 0 #74B9F0;
+  border-radius: 5px 5px 5px 5px;
+  padding: 5px 15px 15px;
+  border-spacing: 1px;
+  padding: 5px;
+}
+
+table.table_data tr.table_header {
+  background: none repeat scroll 0 0 #FFFFFF;
+  color: #990A10;
+  font-weight: bold;
+  text-align: left;
+}
+
+.blank {
+  height: 10px;
+  margin: 10px;
+}
+
+
+
+table.table_data .odd {
+  background: none repeat scroll 0 0 #FFFFFF;
+  color: #27292B;
+  font-size: 14px;
+  padding: 50px;
+  text-align: left;
+}
+
+table.table_data .even {
+  background: none repeat scroll 0 0 #F1F6FF;
+  color: #27292B;
+  font-size: 14px;
+  padding: 50px;
+  text-align: left;
+}
+
+table.table_data td a {
+  color: #27292B;
+  text-decoration: none;
+}
+
+table.table_data td.col-2 {
+  padding: 5px 5px 5px 10px;
+  text-align: left;
+  width: 40%;
+}
+
+.table_data th{
+  font-weight:normal;
+}
+table.table_data td.col-3 {
+  padding: 5px 5px 5px 10px;
+  width: 13%;
+}
+
+table.table_data tr.table_header {
+  background: none repeat scroll 0 0 #FFFFFF;
+  color: #990A10;
+  font-weight: bold;
+  text-align: left;
+}
+
+table.table_data .table_header td {
+  padding: 5px 5px 5px 10px;
+}
+
+table.table_data tr.table_header {
+  background: none repeat scroll 0 0 #FFFFFF;
+  color: #990A10;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+/************ GRIDVIED CSS BY KARMRAJ ZALA*********************/
+
+.grid-view table.items th {
+  background:none !important;
+  background-color: #87907D !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  border-left: 1px solid #FFF !important;
+  
+}
+
+.grid-view table th a {
+  font-weight: normal !important;
+}
+
+.grid-view table th, .grid-view table td {
+  border-color: #DDDDDD  !important;
+  border-image: none !important;
+  border-style: solid none none !important;
+  border-width: 1px medium medium !important;
+  line-height: 20px;
+  padding: 8px !important;
+  vertical-align: top;
+}
+
+.grid-view table tr td {
+  border-left: 1px solid #DDDDDD !important;
+}
+
+.grid-view table tr.odd {
+  background: none repeat scroll 0 0 #F9F9F9 !important;
+}
+.grid-view table.items tr.selected {
+ background: none repeat scroll 0 0 #BCE774 !important;
+}
+
+.grid-view table tr.even {
+  background: none repeat scroll 0 0 #FFFFFF !important;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+  height: 30px;
+  border-radius: 3px;
+  background:none;
+}
+
+.grid-view table.items tr:hover {
+  background: none repeat scroll 0 0 #ECFBD4 !important;
+}
+
+.grid-view table.items tr.filters {
+  background: none !important;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0 none;
+  border-radius: 3px 3px 3px 3px;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+     background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+/*Two Column Table Css  Ravi Thanki */
+
+#twoColThinTable {
+  width:500px;
+  border:2px solid #F0E68C;
+  border-collapse:collapse;
+  margin:0px;
+  background:#F1F6FF;
+  font-size:12px;
+} 
+#twoColThinTable .row {
+  border-bottom: 1px solid #D9D5BE;
+}
+
+#twoColThinTable .col1 {
+  color: #990A10;
+  text-align: left;
+  text-indent: 5px;
+  width: 215px;
+}
+
+#twoColThinTable .col2 {
+  color: #000000;
+  text-align: left;
+  text-indent: 5px;
+  width: 285px;
+}
+
+.report_footer {
+  color: #FFFFFF;
+}
+/* detail view css*/
+table.detail-view {
+    background: none repeat scroll 0 0 white;
+    border: 3px solid #F0E68C;
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+}
+table.detail-view th {
+    color: #990A10;
+    font-weight: inherit;
+    text-align: right;
+    width: 160px;
+    border: 2px solid #F0E68C !important;
+}
+table.detail-view td {
+    border: 2px solid #F0E68C !important;
+    color: black;
+    font-size: 0.9em;
+    padding: 0.3em 0.6em;
+    vertical-align: top;
+   
+}
+table.detail-view tr.odd {
+    background: none repeat scroll 0 0 #F1F6FF !important;
+}
+table.detail-view tr.even {
+    background: none repeat scroll 0 0 white !important;
+} 
+

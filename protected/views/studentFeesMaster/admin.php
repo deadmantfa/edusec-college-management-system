@@ -1,0 +1,98 @@
+<?php
+$this->breadcrumbs=array(
+	'Student Fees Details'=>array('admin'),
+	'Manage',
+);
+
+$this->menu=array(
+	array('label'=>'', 'url'=>array('feesMaster/admin'),'linkOptions'=>array('class'=>'Manage','title'=>'Manage Fees Category')),
+	/*array('label'=>'Remaining Student', 'url'=>array('studentFeesMaster/assignFeesStudent')),*/
+);
+
+
+Yii::app()->clientScript->registerScript('search', "
+$('.search-button').click(function(){
+	$('.search-form').toggle();
+	return false;
+});
+$('.search-form form').submit(function(){
+	$.fn.yiiGridView.update('student-fees-master-grid', {
+		data: $(this).serialize()
+	});
+	return false;
+});
+");
+?>
+
+<h1>Manage Student Fees Details</h1>
+
+
+
+<?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<div class="search-form" style="display:none">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
+<?php
+$dataProvider = $model->search();
+if(Yii::app()->user->getState("pageSize",@$_GET["pageSize"]))
+$pageSize = Yii::app()->user->getState("pageSize",@$_GET["pageSize"]);
+else
+$pageSize = Yii::app()->params['pageSize'];
+$dataProvider->getPagination()->setPageSize($pageSize);
+?>
+
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'student-fees-master-grid',
+	'dataProvider'=>$dataProvider,
+	'filter'=>$model,
+
+	'columns'=>array(
+
+		array(
+		'header'=>'SI No',
+		'class'=>'IndexColumn',
+		),
+		'student_enroll_no',
+		'student_roll_no',
+		'student_first_name',
+		'fees_master_name',
+		//'student_fees_master_student_transaction_id',
+
+		//'fees_master_table_id',
+		//'student_fees_master_details_id',
+		//'fees_details_amount',
+		//'student_fees_master_org_id',
+		/*
+		'student_fees_master_created_by',
+		'student_fees_master_creation_date',
+		*/
+		array(
+			'class'=>'MyCButtonColumn',
+			'template' => '{view}{delete}',
+			'buttons'=>array(
+		                'view' => array(
+					'url'=>'Yii::app()->createUrl("studentFeesMaster/view", array("student_id"=>$data->student_fees_master_student_transaction_id))',
+		                ),
+				'delete' => array(
+					'url'=>'Yii::app()->createUrl("studentFeesMaster/deleteFees", array("student_id"=>$data->student_fees_master_student_transaction_id,"fees_master_id"=>$data->fees_master_table_id))',
+		                ),
+
+                	),
+			
+		),
+
+		),
+		'pager'=>array(
+		'class'=>'AjaxList',
+		//'maxButtonCount'=>25,
+		'maxButtonCount'=>$model->count(),
+		'header'=>''
+	    	),
+
+
+	
+	
+)); ?>

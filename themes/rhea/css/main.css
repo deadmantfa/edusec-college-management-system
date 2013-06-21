@@ -1,0 +1,301 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	background: #63adca;
+	background: -moz-linear-gradient(top, #63adca 10%, #ffffff 50%, #63adca 90%) #63adca no-repeat;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#63adca), color-stop(50%,#ffffff), color-stop(90%,#63adca)) #63adca no-repeat;
+	background: -webkit-linear-gradient(top, #63adca 10%,#ffffff 50%,#63adca 90%) #63adca no-repeat;
+	background: -o-linear-gradient(top, #63adca 10%,#ffffff 50%,#63adca 90%) #63adca no-repeat;
+	background: -ms-linear-gradient(top, #63adca 10%,#ffffff 50%,#63adca 90%) #63adca no-repeat;
+	background: linear-gradient(top, #63adca 10%,#ffffff 50%,#63adca 90%) #63adca no-repeat;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63adca', endColorstr='#63adca',GradientType=0 );
+}
+
+#page
+{
+	margin-top: -10px;
+	padding-top: 10px;
+	margin-bottom: 5px;
+	background: #00304C;
+}
+
+#header
+{
+	margin: 0;
+	padding: 0;
+}
+
+#content
+{
+    padding: 20px;
+}
+
+#sidebar
+{
+	padding: 20px;
+	height: 100%;
+}
+
+#footer
+{
+	padding: 10px;
+	margin: 10px 20px;
+	font-size: 0.8em;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px 1px black;	
+}
+
+#logo
+{
+	padding: 40px 20px;
+	font-size: 200%;
+}
+
+#mainmenu
+{
+	margin-bottom: 10px;
+}
+
+#mainmenu ul
+{
+	padding:6px 20px 5px 20px;
+	margin-bottom: 10px;
+}
+
+#mainmenu ul li
+{
+	display: inline;
+	margin: 3px;
+}
+
+#mainmenu ul li a
+{
+	color:#FFF;
+	background-color: #80BD26;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#mainmenu ul li a:hover, #mainmenu ul li.active a
+{
+	color: #FFF;
+	background-color: #5EB520;
+	text-decoration:none;
+}
+
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+
+div.form .rememberMe label
+{
+	display: inline;
+}
+
+div.view
+{
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #80BD26;
+}
+
+div.breadcrumbs
+{
+	font-size: 0.9em;
+	padding: 5px 20px;
+}
+
+div.breadcrumbs span
+{
+	font-weight: bold;
+}
+
+div.breadcrumbs a
+{
+	color: #FFF;
+}
+
+div.search-form
+{
+	padding: 10px;
+	margin: 10px 0;
+	background: #eee;
+}
+
+.portlet
+{
+
+}
+
+.portlet-decoration
+{
+	background-color: #004F79;
+}
+
+.portlet-title
+{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	color: #FFF;
+}
+
+.portlet-content
+{
+	margin: 10px;
+}
+
+
+.portlet-content ul
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.portlet-content li
+{
+	padding: 2px 0 4px 0px;
+}
+
+.operations
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.operations li
+{
+	padding-bottom: 2px;
+	
+	margin: 5px 0;
+	padding: 0 !important;
+}
+
+.operations li a
+{
+	display: block;
+	background-color: #80BD26;
+	font: bold 12px Arial;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.operations li a:visited
+{
+	color: #FFF;
+}
+
+.operations li a:hover
+{
+	background-color: #5EB520;
+}
+
+#page #main-content
+{
+	margin: 20px;
+	background: #004F7A;
+    width: 910px;	
+}
+
+#page .container
+{
+	color: #555;
+	background-color: #FFF;
+	margin: 20px;
+    width: 870px;
+}
+
+
+#page, #page .container, #page #main-content
+{
+	border: 1px solid #BBE1EE;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#mainmenu ul li a, .portlet-decoration, .operations li a
+{
+	padding:11px 12px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+	color: white;
+	text-align: center;
+	
+	text-shadow: rgba(0,0,0,0.5) 1px 0px 0px;
+}
+
+/* Uncomment for nice inset shadow effect */
+/*
+
+#page, #page .container, #page #main-content
+{
+    -moz-box-shadow:inset 0 0 10px #000000;
+   -webkit-box-shadow:inset 0 0 10px #000000;
+   box-shadow:inset 0 0 10px #000000;	
+}
+*/
+
+
+
+#page, #page .container, #page #main-content
+{
+    -moz-box-shadow:0 0 3px #000000;
+   -webkit-box-shadow:0 0 3px #000000;
+   box-shadow:0 0 3px #000000;	
+}

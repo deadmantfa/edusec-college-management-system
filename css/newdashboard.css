@@ -1,0 +1,79 @@
+.box {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 10px #AAAAAA;
+  float: left;
+  height: 300px;
+  margin-right: 30px;
+  min-height: 300px;
+  width: 45%;
+}
+.box-noticeboard{
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 10px #AAAAAA;
+  float: left;
+  margin-right: 30px;
+  width: 93.5%;
+  margin-bottom: 30px;
+}
+.box .highcharts-container {
+    left: 0 !important;
+}
+
+.box-header h1 {
+  color: #FFFFFF;
+  display: inline;
+  font-size: 120%;
+  position: relative;
+  text-shadow: 0 1px 0 #151515;
+  top: 2px;
+  font-weight:normal;
+}
+
+
+#menulink {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 10px #AAAAAA;
+  float: left;
+  min-width: 200px;
+  padding: 10px 16px 10px 10px;
+}
+a {
+
+   text-decoration:none;
+}
+.last {margin-right:0;}
+
+.dashboard-content {
+  width:70%;
+  float:left;
+  margin-left: 20px;
+}
+
+.box a {
+  color:#333;
+}
+.box a:hover {
+  color:#0A80CF;
+}
+.box-content ul li {
+  line-height:25px; 
+}
+
+.box-content {
+  padding:15px !important;
+}
+
+.box-header {
+  background: url("../images/headerbox.png") repeat-x scroll 0 0 #3D3D3D;
+  border-radius: 5px 5px 0 0;
+  border-top: 1px solid #444444;
+  margin: -1px -1px 0;
+  padding: 7px 0 9px 20px;
+  position: relative;
+}

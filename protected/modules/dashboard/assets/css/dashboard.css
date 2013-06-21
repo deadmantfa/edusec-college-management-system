@@ -1,0 +1,13 @@
+.column { float: left; padding-bottom: 100px; }
+.dashboard-portlet { margin: 0 1em 1em 0; float:left; width:45%;}
+.dashboard-portlet-invisible { display: none; }
+.dashboard-portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; cursor: move; }
+.dashboard-portlet-header .ui-icon { float: right; }
+.dashboard-portlet-content { padding: 0.4em; }
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+#portlets-toggler-popup ul li {
+  float: left;
+  list-style: none outside none;
+  width: 100%;
+}

@@ -1,0 +1,546 @@
+body {
+  margin:10px auto;
+  padding:0;
+  width:1000px;
+  font-family: arial, helvetica, sans-serif; 
+}
+
+
+#firstlayer {
+  background-color:white;
+  width:auto;
+  height:auto;	
+  padding:50px;
+  margin:0;
+  page-break-after:always;
+  
+}
+/*first receipt css*/
+.part1  {
+  background-color:white;
+  width:auto;
+  height:auto;
+  border: 3px solid black;
+  margin:20px 0 35px 0; /*for space between two recepit*/
+  padding:5px;/*for space of whole header part*/
+  float:left;
+}
+/*---------------header part--------------------------*/
+.rcpt_header,
+.headerpart1 {
+  background-color:white;
+  width:auto;
+  height:110px;
+  margin:0 0 10px 0;
+  border-bottom:3px solid black;
+/*  padding:10px 15px 20px 10px; */
+  
+  
+}
+.headerpart1 .logo {
+   height:auto;
+   width:95px;
+   float:left;
+}
+.headerpart1 .title {
+  text-transform: uppercase;
+  font-size:18px;
+  text-align:center;
+  font-weight:bold;
+  padding:10px 0 0 10px;
+  margin:1px 0 0 0;
+  text-decoration: underline;
+
+  
+  
+}
+.headerpart1 .institutename {
+ text-transform:uppercase; 
+ text-align:center;
+ line-height:0.1px;
+ font-size:1.1em;
+ padding:0 0 0 10px;
+ margin:15px 0 0 0;
+ text-decoration: underline;
+ word-spacing:4px;
+ line-height:1px;
+}
+#firstletter {
+ font-size:1.2em;
+ text-transform:capitalize; 
+ 
+ 
+ 
+}
+.headerpart1 .engineering {
+ text-transform:uppercase;
+ font-size:1.1em;
+ text-align:center;
+ font-style:none;
+ letter-spacing:6px;
+ padding:0 0 0 15px;
+ margin:20px 0 0 0;
+ text-decoration: underline;
+ line-height:1px;
+ 
+}
+.headerpart1 .address {
+ text-transform:capitalize; 
+ text-align:center;
+ padding:0 0 0 20px;
+ margin:15px 0 0 20px;
+ font-size:1em;
+ 
+}
+
+/*--------------------end------------------*/
+
+/*---------------content part-----------------------------*/
+
+.contentpart1 {
+ background-color:white;
+ width:auto;
+ height:auto;
+ margin:0 0 10px 0;
+ padding:0;
+}
+
+.contentpart1 .receipt{
+ text-align:center;
+ font-size:1.6em;
+ text-transform:uppercase;
+ text-decoration:underline;
+ padding:1px 0 0 0;
+ margin:1px 0 0 0;
+ font-weight:bold;
+}
+
+
+.contentpart1 .receipt_header {
+    font-size: 17px;
+    font-weight: bold;
+    margin: -26px 0 0;
+    padding: 0 0 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/*-------------Receipt No & Receipt Date-----------------*/
+.contentpart1 .rcp_info{
+  
+  font-style:italic;
+  line-height:2.5em;
+  clear:both;
+   
+}
+.contentpart1 .rcp_info .rcp_rno{
+float:left;
+padding:0 1px;
+
+}
+.rno {
+
+ font-size:1.1em;
+ word-spacing:10px;
+ padding-left:5px;
+
+}
+.contentpart1 .rcp_info .number{
+font-size:1.5em;
+}
+.contentpart1 .rcp_info .rnoline {
+ border-bottom:1px solid black;
+float:right;
+padding:0 10px;
+text-align:center;
+width:100px;
+
+}
+.rdate {
+text-transform:capitalize;
+ font-size:1.1em;
+ word-spacing:10px;
+ padding-left:5px;
+ float:left;
+}
+.contentpart1 .rcp_info .rcp_date{
+float:right;
+padding:0 0px;
+width:170px;
+}
+.contentpart1 .rcp_info .dateline {
+ border-bottom:1px solid black;
+float:right;
+margin: 0 0px;
+text-align:center;
+width: 112px;
+height:29px;
+}
+.contentpart1 .rcp_info .sname,
+.contentpart1 .rcp_info .sem,
+.contentpart1 .rcp_info .dd,
+.contentpart1 .rcp_info .branch,
+.contentpart1 .rcp_info .semperiod  {
+
+ font-size:1.1em;
+ word-spacing:5px;
+ padding-left:5px;
+}
+
+/*---------------END-----------------------*/
+
+/*---------------Student Name------------------*/
+.contentpart1 .rcp_info .leftspace {
+ padding-left:3px;
+ float:left;
+}
+
+.contentpart1 .rcp_info .nameline {
+  border-bottom: 1px solid #000; 
+  float: left; 
+  width: 680px;
+  height:29px;  
+  text-align: center;
+}
+/*---------------END--------------------------*/
+
+/*---------------Semester Part---------------*/
+
+.contentpart1 .rcp_info .semline {
+ border-bottom:1px solid black;
+ padding: 0 10px;
+ height:29px;
+ float:left;
+ text-align:center;
+}
+
+.contentpart1 .rcp_info .sem_no {
+ width:65px;
+}
+
+.contentpart1 .rcp_info .branch_name {
+ width:470px;
+ padding:0 5px;
+}
+
+.contentpart1 .rcp_info .sem {
+  float:left;
+}
+/*---------------END------------------------*/
+
+/*---------------Draft Part-----------------*/
+
+ 
+.contentpart1 .rcp_info .dd {
+  float:left;
+}
+
+.contentpart1 .rcp_info .ddline {
+ border-bottom:1px solid black;
+ padding:0 10px;
+ height:29px;
+ width:100px;
+ float:left;
+ text-align:center;
+}
+
+.contentpart1 .rcp_info .drawn_on {
+  width:343px;
+}
+/*---------------END------------------------*/
+
+/*---------------branch Part-----------------*/
+ 
+.contentpart1 .rcp_info .branch {
+  float:left;
+}
+.contentpart1 .rcp_info .branchline {
+ border-bottom:1px solid black;
+ padding:0 10px;
+ height:29px;
+ width:550px;
+ float:left;
+ text-align:center;
+ 
+}
+.contentpart1 .rcp_info .branch_on {
+  width:171px;
+}
+/*---------------END------------------------*/
+
+/*---------------Sem Period Part-----------------*/
+
+.contentpart1 .rcp_info .space {
+ padding-left:3px;
+ float:left;
+ 
+}
+
+.contentpart1 .rcp_info .periodline {
+  border-bottom: 1px solid #000; 
+  float: left; 
+  width: 781px;
+  height:29px;  
+  text-align: center;
+  
+}
+/*---------------END------------------------*/
+
+.contentpart1 .output {
+ text-align:center;
+ text-transform:uppercase;
+ font-weight:bold;
+ font-style:normal; 
+ margin: 0 5px;
+}
+
+#spacemore {
+  padding-left:34em;
+  
+}
+#spacethreeem {
+ border-bottom: 1px solid black;
+  text-align:center;
+ text-transform:uppercase;
+ font-weight:bold;
+ font-style:normal; 
+ padding: 0px;
+ margin: 0 64px;
+}
+/*------------------End Contentpart-------------------------*/
+
+/*------------------Table Part------------------------------*/
+
+
+.tablepart1 table {
+ float:left;
+ width:880px;
+ margin:0 1px 0 1px;
+ padding:0 0 0 0;
+ border:1px solid black;
+ /*border-collapse: collapse;*/
+}
+.tablepart1 tr th {
+border: 1px solid black;
+text-transform:capitalize;
+font-size:1em;
+text-align:center;
+}
+
+.tablepart1 tr td {
+text-transform:capitalize;
+font-size:1em;
+text-align:center;
+border: 1px solid black;
+
+}
+#purticular {
+  text-align:left;
+  padding:0 0 0 5px;
+  font-weight:bold;
+}
+
+.contentpart1 tr td {
+border: 1px solid black;
+width:auto;
+}
+#total{
+ text-align:right;
+ padding-right:10px;
+}
+/*------------------Table Part2------------------------------*/
+
+
+.tablepart2 table {
+ float:left;
+ width:880px;
+ margin:0 1px 0 1px;
+ padding:0 0 0 0;
+ border:1px solid black;
+}
+.tablepart2 tr th {
+border: 1px solid black;
+text-transform:capitalize;
+font-size:1em;
+text-align:center;
+}
+
+.tablepart2 tr td {
+text-transform:capitalize;
+font-size:1em;
+text-align:center;
+border: 1px solid black;
+
+}
+#purticular1 {
+  text-align:center;
+  padding:0 0 0 5px;
+  font-weight:bold;
+}
+
+.contentpart1 tr td {
+border: 1px solid black;
+width:auto;
+}
+#total{
+ text-align:center;
+ padding-right:10px;
+}
+
+/*------------------END-------------------------------------*/
+
+/*------------------Footer----------------------------------*/
+
+/*------------------Footer Part----------------------------------*/
+
+/*----Footer-----*/
+.footerpart1 {
+ background-color:white;
+ width:auto;
+ height:auto;
+ margin:0;
+ padding:0;
+ clear:both; 
+}
+
+.footerpart1 .rcp_info {
+  clear:both;
+}
+.footerpart1 .rcp_info .space {
+ padding-left:3px;
+ float:left;
+ 
+}
+
+.footerpart1 .rcp_info .rsline {
+  border-bottom: 1px solid #000; 
+  float:left; 
+  width:759px;
+  height:28px;  
+  text-align: left;
+  padding: 15px 0 0;
+  
+}
+
+.contentpart1 .tablepart1 {
+ float:left;
+ margin:20px 0 10px;
+ 
+}
+
+.footerpart1 .rsinword,
+.footerpart1 .payment,
+.footerpart1 .deposite{
+
+  font-weight:bold;
+  font-size:1.1em;
+  word-spacing:5px;
+  font-style:italic;
+   padding-top:15px;
+   padding-bottom:10px;
+
+ 
+  
+   
+}
+.footerpart1 ul {
+  color:black;
+  margin:5px 0 0 15px;
+  font-size:1em;
+  padding:0 0 1px 10px;
+}
+.footerpart1 ul li {
+list-style-type:disc;
+}
+
+.footerpart1 .ins_eng{
+ text-transform:uppercase;
+ line-height:1px;
+ font-size:1em;
+ font-weight:bold;
+ line-height:50px;
+ float:right;
+
+}
+.footerpart1 .square{
+  height:70px;
+  width:auto;
+  margin-left:39em;
+  padding-top:10px;
+  padding-bottom:0;
+  
+}
+.footerpart1 .sign{
+ text-transform:uppercase;
+ text-align:right;
+ padding-right:5em;
+ padding-top:1.5em;
+ padding-bottom:15px;
+ line-height:0.1px;
+ font-size:1.2em;
+ font-weight:bold;
+}
+.footerpart1 .output {
+ text-align:center;
+ text-transform:uppercase;
+ font-weight:bold;
+ font-style:normal;
+
+  
+  height: 38px;
+ 
+}
+
+/*------------------End Footer Part-------------------------*/
+
+
+.rcp_info .rnoline {
+  line-height: 40px;
+  height:28px;
+  margin: 0 10px;
+}
+.rcp_info .rnoline .output {
+  line-height:35px;
+}
+
+.payment li {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  margin-left: 10px;
+  font-size:16px;
+}
+
+.receipt-logo {
+   float:left;
+}
+
+.rcpt_amt_tic {
+  border: 3px solid;
+  float: right;
+  height: 50px;
+  width: 50px;
+}
+
+.outer-div {
+  float: right;
+  line-height: 50px;
+  margin-right: 65px;
+  width: 90%;
+}
+
+.right-corner {
+  float: right;
+  width: 100%;
+}
+
+.tablepart2 {
+  float: left;
+  margin-top: 20px;
+}
+
+.tablepart1 table tr td.sr-number {
+  text-align:center;
+}
+
+
